@@ -8,20 +8,19 @@ RUN apk --update --upgrade add \
       build-base\
       tzdata
 
-ENV INSTALL_PATH /teste-backend
+RUN mkdir /app
 
-RUN mkdir -p $INSTALL_PATH
+WORKDIR /app
 
-WORKDIR $INSTALL_PATH
+RUN ls
 
-COPY Gemfile* $INSTALL_PATH/
+COPY Gemfile* ./
+COPY . /app
+
+RUN gem install bundler
 
 RUN bundle install
 
-ADD . $INSTALL_PATH
+EXPOSE 3000
 
-RUN mkdir -p $INSTALL_PATH/tmp/pids
-
-RUN chmod +x run.sh
-
-CMD ["./run.sh"]
+CMD ["/usr/bin/bash"]

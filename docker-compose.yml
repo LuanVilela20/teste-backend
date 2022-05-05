@@ -51,11 +51,14 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    command: bundle exec rails server -b 0.0.0.0
     container_name: teste_backend_app
     depends_on:
       - zookeeper
       - kafka
       - kafdrop
+    volumes:
+      - .:/app
     networks: 
       - broker-kafka
     ports:
