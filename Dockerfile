@@ -4,6 +4,7 @@ LABEL maintainer="Matheus M<mmacedo@icasei.com.br>"
 
 RUN apk --update --upgrade add \
       bash\
+      sqlite\ 
       sqlite-dev\
       build-base\
       tzdata

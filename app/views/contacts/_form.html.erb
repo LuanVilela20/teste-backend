@@ -64,6 +64,13 @@
     </div>
     <%=f.error_span(:active) %>
   </div>
+  <div class="form-group">
+    <%= f.label :cpf_cnpj, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :cpf_cnpj, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:cpf_cnpj) %>
+  </div>
 
   <div class="form-group">
     <div class="col-lg-offset-2 col-lg-10">
