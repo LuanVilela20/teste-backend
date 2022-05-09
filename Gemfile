@@ -27,6 +27,7 @@ gem "sqlite3", "~> 1.4"
 
 #Use mongoid as the database for MongoDB
 gem 'mongoid'
+# gem 'bson_ext'
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma"
@@ -49,8 +50,8 @@ gem 'redis-rails'
 
 gem 'delivery_boy'
 gem 'wisper_kafka', '~> 0.1.0'
-gem 'racecar', '~> 2.3.0'
-gem 'rdkafka', '~> 0.8.1'
+gem 'racecar'
+gem 'rdkafka'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]

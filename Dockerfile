@@ -7,9 +7,14 @@ RUN apk --update --upgrade add \
       sqlite\ 
       sqlite-dev\
       build-base\
-      tzdata
+      tzdata\
+      git\
+      python3\
+      librdkafka\
+      openssl-dev 
 
 RUN mkdir /app
+
 
 WORKDIR /app
 
